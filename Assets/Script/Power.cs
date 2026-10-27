@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Force : MonoBehaviour
+public class Power : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float forcePower;
-    private ForceMode2D forceMode;
+    public ForceMode2D forceMode;
     private float jumpStatus;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +19,7 @@ public class Force : MonoBehaviour
     {
         if (jumpStatus > float.Epsilon)
         {
-            rb.AddForce(Vector2.up * forcePower * Time.fixedDeltaTime, ForceMode2D.Force);
+            rb.AddForce(Vector2.up * forcePower * Time.fixedDeltaTime, ForceMode2D.Impulse);
         }
         else
         {

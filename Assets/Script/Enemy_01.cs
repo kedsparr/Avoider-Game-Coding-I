@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy_01 : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     
     public float moveSpeed;
@@ -13,6 +13,6 @@ public class Enemy_01 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(-1, 0, 0);
+        transform.position += new Vector3(moveSpeed, 0, 0) *Time.deltaTime;
     }
 }
