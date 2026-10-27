@@ -15,7 +15,7 @@ public class Force : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate ()
+    void FixedUpdate()
     {
         if (jumpStatus > float.Epsilon)
         {
@@ -25,11 +25,11 @@ public class Force : MonoBehaviour
         {
             //do nothing
         }
-       
+
     }
-   public void OnPower(InputValue input)
+    public void OnPower(InputValue input)
     {
-       jumpStatus = input.Get<float>();
+        jumpStatus = input.Get<float>();
 
         Debug.Log("Force input: " + jumpStatus);
     }
