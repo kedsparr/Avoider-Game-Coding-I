@@ -7,6 +7,7 @@ public class Power : MonoBehaviour
     public float forcePower;
     public ForceMode2D forceMode;
     private float jumpStatus;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,8 +25,8 @@ public class Power : MonoBehaviour
         else
         {
             //do nothing
-        }
 
+        }
     }
     public void OnPower(InputValue input)
     {
@@ -33,4 +34,7 @@ public class Power : MonoBehaviour
 
         Debug.Log("Force input: " + jumpStatus);
     }
+   
+  
+
 }

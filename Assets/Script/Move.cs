@@ -1,11 +1,13 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class Move : MonoBehaviour
+public class AD : MonoBehaviour
 {
-   private Rigidbody2D rb;
-    private float moveStatus;
-    public float moveSpeed;
+ 
+   private float moveStatus;
+   public float moveSpeed;
+    private Vector2 movement;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,16 +16,16 @@ public class Move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
-    }
-    private void OnMove (InputValue input)
-    {
-        moveStatus = input.Get<float>(); 
         if (moveStatus > float.Epsilon)
         {
-            rb.AddForce(Vector2.up * moveSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            transform.position += new Vector3(movement.x, movement.y, 0) * moveSpeed * Time.deltaTime;
         }
+    }
+    private void OnAD (InputValue input)
+    {
+        moveStatus = input.Get<float>(); 
+       
     }
 }
