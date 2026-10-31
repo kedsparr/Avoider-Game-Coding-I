@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7a3ebc7f2ffe847ad59f9bc829a409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Power
-  forcePower: 30
+  forcePower: 15
   forceMode: 0
 --- !u!114 &285207852
 MonoBehaviour:
@@ -357,9 +357,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 285207845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65ff3a79743c2c4bbcc9028a5b09403, type: 3}
+  m_Script: {fileID: 11500000, guid: 5184f83859d715c4fb9988c52fe04154, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Move
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  forcePower: 0
   moveSpeed: 2
 --- !u!1 &519420028
 GameObject:
@@ -508,9 +509,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b030c588afe5549a0a41d87459d291, type: 3}
+  m_Script: {fileID: 11500000, guid: df5080adabd89f245b2d9fe711b0b2cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Camera
+  m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
   player: {fileID: 285207847}
 --- !u!1 &619394800
 GameObject:
@@ -1256,8 +1257,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 285207847}
   - {fileID: 1222822811}
+  - {fileID: 285207847}
   - {fileID: 1633233680}
   - {fileID: 5662720831488727240}
   - {fileID: 3213041512069795449}
