@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7311177141872821419}
   - component: {fileID: 6065531643086357132}
   - component: {fileID: 4687398587874137336}
-  - component: {fileID: 8804835207029373584}
   m_Layer: 0
   m_Name: star yellow copy 2_0
   m_TagString: Enemy
@@ -144,16 +143,3 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 5.734999
---- !u!114 &8804835207029373584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3945171169943949651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65ff3a79743c2c4bbcc9028a5b09403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Move
-  moveSpeed: 0

@@ -7,16 +7,6 @@
             "id": "87f15e2b-2d37-4f30-b4bc-cdaf27184df2",
             "actions": [
                 {
-                    "name": "Power",
-                    "type": "Button",
-                    "id": "413064ee-302f-4c51-9c72-e5dc0dff281a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
                     "name": "Move",
                     "type": "Value",
                     "id": "5b85aeb8-c9bc-4914-bc97-dbab2644ce08",
@@ -25,20 +15,29 @@
                     "interactions": "",
                     "initialStateCheck": true,
                     "priority": 0
+                },
+                {
+                    "name": "Power",
+                    "type": "Value",
+                    "id": "413064ee-302f-4c51-9c72-e5dc0dff281a",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "a4594bcd-2338-4014-9735-c81881190688",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "15d4e0c4-a0df-42fd-99e0-5b43dda6828a",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Power",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "AD",
                     "id": "f8d19fb8-2305-4353-b025-78b941e29cc2",
@@ -71,6 +70,50 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "WS",
+                    "id": "33dc449d-1e58-40e8-b498-80c937954e33",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Power",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "825ca0bb-8ece-4ab8-be90-c9ae336a0779",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Power",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "d1611317-b821-40f7-9a2c-01acf2f9ff56",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Power",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "426d026b-3c71-4b2f-91e2-f84781a6033f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

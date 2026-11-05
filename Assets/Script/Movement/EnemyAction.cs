@@ -46,4 +46,5 @@ public class EnemyAction : MonoBehaviour
         EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
         enemyMovement.moveSpeed = randomSpeed;
     }
+
 }

@@ -5,36 +5,33 @@ public class Power : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float forcePower;
-    public ForceMode2D forceMode;
-    private float jumpStatus;
-    
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float dropPower;
+    public ForceMode2D forceMode;
+
+    public ForceMode2D fM;
+    private float jumpStatus;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (jumpStatus > float.Epsilon)
         {
-            rb.AddForce(Vector2.up * forcePower * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * forcePower * Time.fixedDeltaTime, forceMode);
         }
-        else
+        else if (jumpStatus < -float.Epsilon)
         {
-            //do nothing
-
+            rb.gravityScale = 0.5f;
+            rb.AddForce(Vector2.down * dropPower  * Time.fixedDeltaTime, fM);
         }
     }
+
     public void OnPower(InputValue input)
     {
         jumpStatus = input.Get<float>();
-
-        Debug.Log("Force input: " + jumpStatus);
     }
-   
-  
-
 }
