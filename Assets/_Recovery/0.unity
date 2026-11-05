@@ -423,9 +423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7a3ebc7f2ffe847ad59f9bc829a409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Power
-  forcePower: 50
+  forcePower: 3000
   dropPower: 40
-  forceMode: 1
+  forceMode: 0
   fM: 1
 --- !u!114 &285207853
 MonoBehaviour:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
   minpos: -0.13
-  maxpos: 37
+  maxpos: 50
   target: {fileID: 285207847}
 --- !u!1 &619394800
 GameObject:
@@ -728,7 +728,7 @@ Transform:
   m_GameObject: {fileID: 678013082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.9, y: -4.6, z: 0}
+  m_LocalPosition: {x: -15.14, y: -1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -750,11 +750,62 @@ MonoBehaviour:
   - {fileID: 3945171169943949651, guid: 0ac9785f2a966974788544d51566f3cf, type: 3}
   - {fileID: 9069954992802775918, guid: 1371a0e781de0b548bdea49762298471, type: 3}
   - {fileID: 9069954992802775918, guid: 1371a0e781de0b548bdea49762298471, type: 3}
-  spawnCooldown: 3
+  spawnCooldown: 2
   minPosition: -5
-  maxPosition: 23
+  maxPosition: 70
   minEnemySpeed: 3
   maxEnemySpeed: 8
+--- !u!1 &723606535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 723606537}
+  - component: {fileID: 723606536}
+  m_Layer: 0
+  m_Name: TreatSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &723606536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723606535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c096e85fc55a3474c8679c5989d98cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreatBehavior
+  enemyObjects:
+  - {fileID: 1009994039783732709, guid: fc679d93b5ac1184284f44cb2b4b695f, type: 3}
+  spawnCooldown: 4
+  minPosition: -5
+  maxPosition: 70
+  minEnemySpeed: 2
+  maxEnemySpeed: 5
+--- !u!4 &723606537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723606535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.5, y: 29.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1002093312
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +924,7 @@ Transform:
   m_GameObject: {fileID: 1009877137}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.47, y: -1.4, z: 0}
+  m_LocalPosition: {x: 9.4, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -895,7 +946,7 @@ MonoBehaviour:
   - {fileID: 1009994039783732709, guid: fc679d93b5ac1184284f44cb2b4b695f, type: 3}
   spawnCooldown: 2
   minPosition: -5
-  maxPosition: 25
+  maxPosition: 70
   minEnemySpeed: 2
   maxEnemySpeed: 5
 --- !u!1 &1122941294
@@ -1240,7 +1291,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6579452578910692447, guid: d632f804368cec84baf7be09b1e66946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1430,8 +1481,8 @@ Transform:
   m_GameObject: {fileID: 1636238287}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.3, y: 18.1, z: 0}
-  m_LocalScale: {x: 0.25344902, y: 89.905716, z: 1.1237}
+  m_LocalPosition: {x: -18.1, y: 18.1, z: 0}
+  m_LocalScale: {x: 0.27456132, y: 89.905716, z: 1.1237}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1448,6 +1499,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538f2d294ba0bbf4b8a945434f594c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestoryTreat
+--- !u!1 &2014865483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014865485}
+  - component: {fileID: 2014865484}
+  m_Layer: 0
+  m_Name: EnemySpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2014865484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014865483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0899750f142c64292eabfb1742d726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAction
+  enemyObjects:
+  - {fileID: 3945171169943949651, guid: 0ac9785f2a966974788544d51566f3cf, type: 3}
+  - {fileID: 9069954992802775918, guid: 1371a0e781de0b548bdea49762298471, type: 3}
+  - {fileID: 9069954992802775918, guid: 1371a0e781de0b548bdea49762298471, type: 3}
+  spawnCooldown: 3
+  minPosition: -5
+  maxPosition: 70
+  minEnemySpeed: 3
+  maxEnemySpeed: 8
+--- !u!4 &2014865485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014865483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.3, y: 18.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2104909539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,7 +1744,9 @@ SceneRoots:
   - {fileID: 1636238291}
   - {fileID: 2104909544}
   - {fileID: 678013083}
+  - {fileID: 2014865485}
   - {fileID: 1009877138}
+  - {fileID: 723606537}
   - {fileID: 1002093314}
   - {fileID: 1229099}
   - {fileID: 1596923150}
